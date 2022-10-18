@@ -1,0 +1,66 @@
+html, body {
+	height: 100%;
+	background-color: silver;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+h1, h2 {
+	text-align:center;
+}
+
+.form {
+	display:block;
+	width: 800px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+input {
+	width: 800px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.container {
+	display:block;
+}
+
+table {
+	width: 800px;
+	border-collapse: separate;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+th {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color:white;
+}
+
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: dark;
+}
+
+th {
+	text-align: left;
+}
+
+.tableRow_Head > th {
+	
+		background-color: #55608f;
+}
+
+.tableRow_Body:hover {
+	background-color: white;
+}

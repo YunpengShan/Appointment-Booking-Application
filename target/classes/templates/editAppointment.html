@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all"
+	th:href="@{/css/main.css}" />
+</head>
+<body>
+<h2>Edit Item</h2>
+<form th:method="post" th:action="@{/doEdit}" th:object="${appointment}" th:class="form">
+		<input type="hidden" th:field="*{id}">
+		FirstName: <input type="text" th:field="*{firstName}"><br>
+		Email: <input type="email" th:field="*{email}"><br>
+		AppointmentDate: <input type="date" th:field="*{appointmentDate}"><br> 
+		AppointmentTime: <input type="time" th:field="*{appointmentTime}"><br> 
+		<input type="submit" value="Update Appointment">
+	</form>
+</body>
+</html>

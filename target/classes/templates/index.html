@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all"
+	th:href="@{/css/main.css}" />
+</head>
+<body>
+
+	<div class="container">
+		<h2>All Appointments</h2>
+		<table>
+			<tr class="tableRow_Head">
+				<th>ID</th>
+				<th>FirstName</th>
+				<th>Email</th>
+				<th>AppointmentDate</th>
+				<th>AppointmentTime</th>
+				<th>Actions</th>
+			</tr>
+			<tr th:each="a : ${appointments}" th:object="${a}"
+				th:class="tableRow_Body">
+				<td th:text="*{id}"></td>
+				<td th:text="*{firstName}"></td>
+				<td th:text="*{email}"></td>
+				<td th:text="*{appointmentDate}"></td>
+				<td th:text="*{appointmentTime}"></td>
+				<td><a th:href="@{/edit/{id}(id=*{id})}">Edit</a>&nbsp; <a
+					th:href="@{/delete/{id}(id=*{id})}">Delete</a></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<br>
+	<h1>Add an Appointment</h1>
+	<div class="form">
+		<form th:method="post" th:action="@{/}" th:object="${appointment}">
+			ID: <input type="text" th:field="*{id}"><br> FirstName:
+			<input type="text" th:field="*{firstName}"><br> Email: <input
+				type="email" th:field="*{email}"><br> AppointmentDate:
+			<input type="date" th:field="*{appointmentDate}"><br>
+			AppointmentTime: <input type="time" th:field="*{appointmentTime}"><br>
+			<input type="submit" value="Add Appointment">
+		</form>
+	</div>
+</body>
+</html>
