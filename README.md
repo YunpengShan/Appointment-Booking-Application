@@ -9,3 +9,7 @@ This is a project using Spring Boot and coded in Java and HTML, CSS
 # Edit Page
 
 ![](images/edit.jpg)
+
+# Updated Page
+
+![](images/edited.jpg)
